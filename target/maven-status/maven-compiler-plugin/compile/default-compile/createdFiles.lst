@@ -1,8 +1,0 @@
-restyql/annotation/RestyQL.class
-restyql/model/RestySchema.class
-restyql/annotation/RestyQLSchema.class
-restyql/interceptor/RestyQLHandlerArgResolver.class
-restyql/interceptor/RestyResAdvice.class
-restyql/util/RestyQLBuilder.class
-restyql/annotation/DynamicRestyQL.class
-restyql/interceptor/RestyQLInterceptor.class
