@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="restyInterface" />
+        <module name="restyQL" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="restyInterface" target="1.8" />
+      <module name="restyQL" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

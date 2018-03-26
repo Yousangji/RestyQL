@@ -1,6 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="restyql">
-    <output-path>$PROJECT_DIR$/../../restyInterface</output-path>
-    <root id="archive" name="restyql.jar" />
-  </artifact>
-</component>
