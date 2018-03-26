@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Class-Path: spring-core-5.0.3.RELEASE.jar spring-jcl-5.0.3.RELEASE.jar
+  spring-webmvc-5.0.3.RELEASE.jar tomcat-embed-core-9.0.0.M27.jar spri
+ ng-beans-5.0.3.RELEASE.jar tomcat-annotations-api-9.0.0.M27.jar sprin
+ g-context-5.0.3.RELEASE.jar spring-aop-5.0.3.RELEASE.jar spring-web-5
+ .0.3.RELEASE.jar spring-expression-5.0.3.RELEASE.jar
+
