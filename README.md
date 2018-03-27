@@ -83,7 +83,7 @@ Step 1. Add the JitPack repository to your build file
 Step 2. Add the dependency
 ```xml
 <dependency>
-    <groupId>com.github.User</groupId>
+    <groupId>com.github.Yousangji</groupId>
     <artifactId>RestyQL</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 </dependency>
