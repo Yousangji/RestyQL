@@ -1,22 +1,32 @@
 # RestyQL
-#### Query Interface for APIs
+#### Alternative to GraphQL Fully Compatible to Standard REST API
 
-RestyQL is a query Interface for APIs benchmarking GraphQL and helps communicating between Client and back-end Server, solving the main problem of OOP.\
-Regardless of whether you need it or not, a number of properties are structural problems that Object-Orient-Programming has.
-It communicates with resources in form of object, Neither side client or server could select properties which they only require.\
-'RestQL' is the solution to this problem by specifying and communicating what is needed.
 
+1. Ask for What you want, Restricting What you do not want
+2. Self-describable data with intact existing code.
+3. get predictable result fast.
+4. No need to Learn, No need to Modify.
+
+
+
+Give the power of controlling data which they wants or do not want to not only Client But Server.\
+Result is always predictable because it only contains required values.\
+compacter results , faster results. \
+Adding annotation or query parameter is the only what developer should learn or modify the existing code.\
+ 
 
 ## Feature
 ### 1. RestyQL is about setting or asking for specific fields required or restricted on object.
    For example, Server can set a range of fields on objects returning as a response, and at the same time specify some fields not to be sent with 'RestyQL annotation'. Client side can also ask for specific fields on objects and specify some fields to Ignore by adding 'query','ignore' parameter when requests http.
 
-   ####Client Side Request 
-  > `query = id, name, profile , contacts.email`   
+   #### Client Side Request 
+  >  `query = id, name, profile , contacts.email`   
+  
    Client request value of id, email, profile and only email address of contact field.
      
       
-  >`ignore = profile.location.let `\
+  > `ignore = profile.location.let` 
+  
    Client request not to send location value. profile is subclass which has location as one of fields.
             
             
