@@ -22,14 +22,14 @@ It communicates with resources in form of object, Neither side client or server 
             
             
      
-  >         http://api/users?query = id,name,profile,contact.email & ignore = profile.location
+  >     http://api/users?query = id,name,profile,contact.email & ignore = profile.location
    This query will return user objects which only contains id, name, profile class except location field, email field of contact object.
    
    
   
 #### Server Side Setting
 ```java
-@RestyQL(value = {"name", "profile", "contacts"}, ignore = { "id", "password", "profile.location.detail" })
+@RestyQL(value = {"name", "profile", "contacts"}, ignore = {"id", "password", "profile.location.detail"})
 ```
    
    Putting @RestyQL annotation on method,\
@@ -53,21 +53,19 @@ It communicates with resources in form of object, Neither side client or server 
    It will returns empty schema of objects filtered by client side request and server side setting.
   >
 ```json
-    {
-    	"name" : {},
-    	"profile" :
-    		{
-    			"sex" : {},
-    			"hobby" : {},
-    			"location" : {
-    				"lan" : {}
-    			    }
-    		},
-    	"contacts":
-    		{
-    			"email":{}
-    		}
+{
+    "name": {},
+    "profile": {
+        "sex": {},
+        "hobby": {},
+        "location": {
+            "lan": {}
+        }
+    },
+    "contacts": {
+        "email": {}
     }
+}
 ```
     
 
@@ -76,17 +74,17 @@ It communicates with resources in form of object, Neither side client or server 
 Step 1. Add the JitPack repository to your build file
 ```xml
 <repositories>
-  <repository>  
-    <id>jitpack.io</id>
-    <url>https://jitpack.io</url>
-  </repository>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
 </repositories>
 ```
 Step 2. Add the dependency
 ```xml
 <dependency>
-   <groupId>com.github.User</groupId>
-   <artifactId>RestyQL</artifactId>
-   <version>1.0.0-SNAPSHOT</version>
+    <groupId>com.github.User</groupId>
+    <artifactId>RestyQL</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
 </dependency>
 ```
