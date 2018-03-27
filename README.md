@@ -41,13 +41,14 @@ It communicates with resources in form of object, Neither side client or server 
  &nbsp;
  &nbsp;
  &nbsp;
-### 2. Also, RestyQL helps http communication be self-documenting.
+### 2. RestyQL helps http communication be self-documenting.
    Adding 'schema' parameter in http request, client would get empty schema of objects which describe the result of request.
     
        http://api/users?query = id,name,profile,contact.email & ignore = profile.location & schema
        
     
-  > If any http request contains 'schema' as a key of parameter, It will returns empty schema of objects.
+  > If any http request contains 'schema' as a key of parameter,\
+   It will returns empty schema of objects filtered by client side request and server side setting.
   >
     {
     	"name" : {},
