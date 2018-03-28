@@ -1,21 +1,22 @@
 # RestyQL
-#### Alternative to GraphQL Fully Compatible to Standard REST API
+### Alternative to GraphQL Fully Compatible to Standard REST API
 
 
 1. Ask for What you want, Restricting What you do not want
 2. Self-describable data with intact existing code.
-3. get predictable result fast.
+3. Get Predictable Result Fast.
 4. No need to Learn, No need to Modify.
 
 
 
-Give the power of controlling data which they wants or do not want to not only Client But Server.\
+Give the power of controlling data which they wants or do not want.\
+The power is given to not only Client But Server.\
 Result is always predictable because it only contains required values.\
-compacter results , faster results. \
-Adding annotation or query parameter is the only what developer should learn or modify the existing code.\
+Compacter results , Faster results. \
+Adding annotation or query parameter is the only thing that developer should do.\
  
 
-## Feature
+## For Example
 ### 1. RestyQL is about setting or asking for specific fields required or restricted on object.
    For example, Server can set a range of fields on objects returning as a response, and at the same time specify some fields not to be sent with 'RestyQL annotation'. Client side can also ask for specific fields on objects and specify some fields to Ignore by adding 'query','ignore' parameter when requests http.
 
@@ -39,7 +40,14 @@ Adding annotation or query parameter is the only what developer should learn or 
   
 #### Server Side Setting
 ```java
+public class UserController{
+    
 @RestyQL(value = {"name", "profile", "contacts"}, ignore = {"id", "password", "profile.location.detail"})
+public User getUsers(){
+    return User;
+}
+
+}
 ```
    
    Putting @RestyQL annotation on method,\
