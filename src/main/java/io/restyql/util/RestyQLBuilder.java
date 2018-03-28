@@ -1,9 +1,9 @@
 package io.restyql.util;
 
 
-import org.springframework.util.ClassUtils;
 import io.restyql.annotation.RestyQL;
 import io.restyql.model.RestySchema;
+import org.springframework.util.ClassUtils;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -163,7 +163,7 @@ public class RestyQLBuilder {
      */
     private static boolean isSimpleValueType(Class clazz) {
         return ClassUtils.isPrimitiveOrWrapper(clazz) || clazz.isEnum() || CharSequence.class.isAssignableFrom(clazz) || Number.class.isAssignableFrom(clazz)
-            || Date.class.isAssignableFrom(clazz) || URI.class == clazz || URL.class == clazz || Locale.class == clazz || Class.class == clazz;
+            || Date.class.isAssignableFrom(clazz) || URI.class == clazz || URL.class == clazz || Locale.class == clazz || Class.class == clazz || Calendar.class == clazz || clazz.getClassLoader()!=ClassLoader.getSystemClassLoader();
 
     }
 
